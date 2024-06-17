@@ -1,0 +1,123 @@
+/* navbar styles */
+
+.nav-container{
+    background: var(--clr-black);
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-center{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-container .logo-section{
+    width: 30px;
+}
+
+.nav-container .hamburger{
+    width: 25px;
+    display: flex;
+    justify-self: flex-end;
+}
+
+
+.nav-links-main{
+    display: none;
+}
+.nav-social-link-main{
+    display: none;
+}
+
+@media screen and (min-width:992px){
+
+    .nav-container{
+        min-height: 70px;
+    }
+
+    .nav-center{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .nav-container .hamburger{
+        display: none;
+    }
+
+    .nav-container .nav-links-main{
+        display: flex;
+    }
+    
+    .nav-container .nav-links{
+        display: flex;
+       column-gap: 30px;
+    }
+
+    .nav-container .nav-social-link-main{
+        display: flex;
+    }
+
+    .nav-container .nav-link{
+        color: var(--clr-white);
+        font-size: 16px;
+        text-transform: capitalize;
+        font-weight: bold;
+        letter-spacing: 1px;
+        border-radius: var(--radius);
+        top: -70px;
+        transition: var(--transition);
+    }
+
+    .nav-container .nav-link.active,
+    .nav-container .nav-link:hover{
+        background: var(--clr-white-light);
+        color: var(--clr-black);
+        cursor: pointer;
+        padding: 1px;
+    }
+
+    .nav-container.nav-social-link-main {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav-social-link-main .nav-social-links{
+        column-gap: 10px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .nav-social-links .nav-social-link{
+        width: 30px;
+        height: 30px;
+        border: 1px solid var(--clr-white);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+
+    .nav-container .nav-social-link img{
+        width: 14px;
+    }
+
+    .nav-social-link-main .nav-social-link:hover{
+        transition: var(--transition);
+        transform: translateY(-3px);
+    }
+
+    .nav-container.sticky-nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        transition:var(--transition);
+
+
+    }
+
+}
